@@ -18,8 +18,8 @@ enum class AndesBadgeHierarchy {
 
     private fun getAndesButtonHierarchy(): AndesBadgeHierarchyInterface {
         return when (this) {
-            QUIET -> AndesQuietBadgeHierarchy
-            LOUD -> AndesLoudBadgeHierarchy
+            QUIET -> AndesQuietBadgeHierarchy()
+            LOUD -> AndesLoudBadgeHierarchy()
         }
     }
 }

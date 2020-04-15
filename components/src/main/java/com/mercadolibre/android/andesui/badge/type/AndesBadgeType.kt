@@ -21,11 +21,11 @@ enum class AndesBadgeType {
 
     private fun getAndesBadgeHierarchy(): AndesBadgeTypeInterface {
         return when (this) {
-            NEUTRAL -> AndesNeutralBadgeType
-            HIGHLIGHT -> AndesHighlightBadgeType
-            SUCCESS -> AndesSuccessBadgeType
-            WARNING -> AndesWarningBadgeType
-            ERROR -> AndesErrorBadgeType
+            NEUTRAL -> AndesNeutralBadgeType()
+            HIGHLIGHT -> AndesHighlightBadgeType()
+            SUCCESS -> AndesSuccessBadgeType()
+            WARNING -> AndesWarningBadgeType()
+            ERROR -> AndesErrorBadgeType()
         }
     }
 }

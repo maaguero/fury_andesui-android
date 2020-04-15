@@ -105,9 +105,9 @@ class AndesBadge : CardView {
                 type: AndesBadgeType = STATE_DEFAULT,
                 border: AndesBadgeBorder = BORDER_DEFAULT,
                 size: AndesBadgeSize = SIZE_DEFAULT,
-                title: String? = TITLE_DEFAULT
+                text: String? = TEXT_DEFAULT
     ) : super(context) {
-        initAttrs(modifier, hierarchy, type, border, size, title)
+        initAttrs(modifier, hierarchy, type, border, size, text)
     }
 
     /**
@@ -213,6 +213,6 @@ class AndesBadge : CardView {
         private val MODIFIER_DEFAULT = AndesBadgeModifier.PILL
         private val SIZE_DEFAULT = AndesBadgeSize.SMALL
         private val STATE_DEFAULT = AndesBadgeType.NEUTRAL
-        private val TITLE_DEFAULT = null
+        private val TEXT_DEFAULT = null
     }
 }

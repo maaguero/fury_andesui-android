@@ -16,14 +16,14 @@ import com.mercadolibre.android.andesui.typeface.getFontOrDefault
  * Those properties change depending on the style of the badge.
  *
  */
-internal sealed class AndesBadgeHierarchyInterface {
+internal interface AndesBadgeHierarchyInterface {
     /**
      * Returns a [AndesColor] that contains the color data for the message background.
      *
      * @param type is the selected type of badge.
      * @return a [AndesColor] that contains the color data for the badge background.
      */
-    abstract fun backgroundColor(type: AndesBadgeTypeInterface): AndesColor
+    fun backgroundColor(type: AndesBadgeTypeInterface): AndesColor
 
     /**
      * Returns a [AndesColor] that contains the data for the text color.
@@ -32,15 +32,15 @@ internal sealed class AndesBadgeHierarchyInterface {
      * @param type is the selected type of badge.
      * @return a [AndesColor] that contains the data for the text color.
      */
-    abstract fun textColor(type: AndesBadgeTypeInterface): AndesColor
+    fun textColor(type: AndesBadgeTypeInterface): AndesColor
 }
 
-internal object AndesLoudBadgeHierarchy : AndesBadgeHierarchyInterface() {
+internal class AndesLoudBadgeHierarchy : AndesBadgeHierarchyInterface {
     override fun backgroundColor(type: AndesBadgeTypeInterface) = type.primaryColor()
     override fun textColor(type: AndesBadgeTypeInterface) = R.color.andes_white.toAndesColor()
 }
 
-internal object AndesQuietBadgeHierarchy : AndesBadgeHierarchyInterface() {
+internal class AndesQuietBadgeHierarchy : AndesBadgeHierarchyInterface {
     override fun backgroundColor(type: AndesBadgeTypeInterface) = type.secondaryColor()
     override fun textColor(type: AndesBadgeTypeInterface) = type.primaryColor()
 }
