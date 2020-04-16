@@ -86,7 +86,6 @@ class AndesBadge : CardView {
         }
 
     private lateinit var badgeTitle: TextView
-    private lateinit var badgeBackground: View
     private lateinit var andesBadgeAttrs: AndesBadgeAttrs
 
     @Suppress("unused")
@@ -154,7 +153,6 @@ class AndesBadge : CardView {
      */
     private fun initComponents() {
         val container = LayoutInflater.from(context).inflate(R.layout.andes_layout_badge, this)
-        //badgeBackground = container.findViewById(R.id.andes_badge_background)
         badgeTitle = container.findViewById(R.id.andes_badge_text)
     }
 
